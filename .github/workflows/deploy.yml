@@ -11,30 +11,38 @@ permissions:
   id-token: write
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4 
-        with:
-          fetch-depth: 0
-          persist-credentials: true
+        uses: actions/checkout@v4
 
       - name: Setup Node (optional)
         uses: actions/setup-node@v4
         with:
           node-version: '24'
 
-      # Si necesitas un build (npm, generadores estáticos), descomenta e instala:
+      # Si necesitas un proceso de build:
       # - name: Install dependencies
       #   run: npm ci
+      #
       # - name: Build
       #   run: npm run build
 
-      - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: ./
-          force_orphan: true
+          path: ./
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
