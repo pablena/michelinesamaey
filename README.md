@@ -1,4 +1,4 @@
-# Sitio web — Nombre Apellido (página de artista)
+# Sitio web — Nombre Apellido (página de artista) A
 
 Sitio web estático para una pintora española, moderno, elegante y responsive. Incluye páginas: inicio, galería, biografía y contacto. Ya están añadidos los archivos base: `index.html`, `gallery.html`, `about.html`, `contact.html`, `assets/css/style.css` y `assets/js/main.js`.
 
