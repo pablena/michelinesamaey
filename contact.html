@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contacto — Nombre Apellido</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">Nombre Apellido</a>
+      <button id="nav-toggle" aria-label="Abrir menú" class="nav-toggle">☰</button>
+      <nav class="site-nav" id="site-nav">
+        <a href="/">Inicio</a>
+        <a href="/gallery.html">Galería</a>
+        <a href="/about.html">Biografía</a>
+        <a href="/contact.html" aria-current="page">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding:1.5rem 0;">
+    <h2>Contacto</h2>
+    <p class="muted">Para encargos, exposiciones o prensa, escríbeme.</p>
+
+    <section style="display:flex; gap:1.5rem; flex-direction:column;">
+      <div class="form">
+        <form data-contact>
+          <label for="name">Nombre *</label>
+          <input id="name" name="name" class="input" required>
+
+          <label for="email">Correo electrónico *</label>
+          <input id="email" name="email" class="input" type="email" required>
+
+          <label for="message">Mensaje *</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <div style="margin-top:.75rem;">
+            <button class="btn" type="submit">Enviar</button>
+            <span class="muted" style="margin-left:1rem">O escribe a <a href="mailto:artista@example.com">artista@example.com</a></span>
+          </div>
+        </form>
+      </div>
+
+      <aside class="card" style="max-width:420px;">
+        <h4>Información</h4>
+        <p class="muted">Ubicación: Madrid, España</p>
+        <p class="muted">Disponibilidad para exposiciones y encargos por encargo.</p>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Nombre Apellido — Todos los derechos reservados.</p>
+      <nav class="social">
+        <a href="#">Instagram</a>
+        <a href="#">Behance</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
