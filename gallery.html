@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Galería — Nombre Apellido</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">Nombre Apellido</a>
+      <button id="nav-toggle" aria-label="Abrir menú" class="nav-toggle">☰</button>
+      <nav class="site-nav" id="site-nav">
+        <a href="/">Inicio</a>
+        <a href="/gallery.html" aria-current="page">Galería</a>
+        <a href="/about.html">Biografía</a>
+        <a href="/contact.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding:1.5rem 0;">
+    <h2 style="margin:.25rem 0 1rem">Galería</h2>
+    <p class="muted">Selecciona una obra para ver en detalle.</p>
+
+    <section class="gallery-grid" aria-live="polite">
+      <!-- Repeat gallery-item. Replace data-full with full-res image url -->
+      <div class="gallery-item" role="button" tabindex="0">
+        <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=800&auto=format&fit=crop&s=placeholder" data-full="https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=1600&auto=format&fit=crop&s=placeholder" alt="Obra 1">
+        <div class="gallery-caption">Obra 1 — Técnica mixta, 2024</div>
+      </div>
+
+      <div class="gallery-item" role="button" tabindex="0">
+        <img src="https://images.unsplash.com/photo-1506086679523-4d6b3a1d4f45?q=80&w=800&auto=format&fit=crop&s=placeholder" data-full="https://images.unsplash.com/photo-1506086679523-4d6b3a1d4f45?q=80&w=1600&auto=format&fit=crop&s=placeholder" alt="Obra 2">
+        <div class="gallery-caption">Obra 2 — Óleo sobre lienzo, 2023</div>
+      </div>
+
+      <div class="gallery-item" role="button" tabindex="0">
+        <img src="https://images.unsplash.com/photo-1508249670855-0a3f6f6ec589?q=80&w=800&auto=format&fit=crop&s=placeholder" data-full="https://images.unsplash.com/photo-1508249670855-0a3f6f6ec589?q=80&w=1600&auto=format&fit=crop&s=placeholder" alt="Obra 3">
+        <div class="gallery-caption">Obra 3 — Acrílico, 2022</div>
+      </div>
+
+      <!-- Añade más obras según necesidad -->
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Nombre Apellido — Todos los derechos reservados.</p>
+      <nav class="social">
+        <a href="#">Instagram</a>
+        <a href="#">Behance</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
